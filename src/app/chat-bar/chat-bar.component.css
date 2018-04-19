@@ -1,0 +1,27 @@
+input {
+    width: 80%;
+    float: left;
+    min-width: 240px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    }
+    
+    .chat-box{
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    }
+    
+    .btn-nickname{
+    float: left;
+    width: 20%;
+    min-width:60px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    }
+    
+    button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }

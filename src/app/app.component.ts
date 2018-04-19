@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'chat-app';
+
+  public message: string;
+
+  public onSubmitMessage($event: any): void {
+    if (!this.message) {
+      this.message = '';
+    }
+
+    this.message += $event;
+  }
 }
