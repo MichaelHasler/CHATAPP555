@@ -1,4 +1,6 @@
 <content>
+    <button routerLink="/home" class="btn btn-primary btn-nickname" >Change Nickname</button>
     <app-chat-history [history]="message"></app-chat-history>
     <app-chat-bar (submitMessage)="onSubmitMessage($event)"></app-chat-bar>
+    
 </content>

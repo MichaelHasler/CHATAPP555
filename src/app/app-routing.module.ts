@@ -6,6 +6,7 @@ import { ChatpageComponent } from './chatpage/chatpage.component';
 import { NicknameComponent } from './nickname/nickname.component';
 
 const routes: Routes = [
+
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'chatpage', component: ChatpageComponent },
   { path: 'home', component: NicknameComponent}
