@@ -9,7 +9,10 @@ import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
 import { ChatBarComponent } from './chat-bar/chat-bar.component';
 import { ChatHistoryComponent } from './chat-history/chat-history.component';
-
+import { AppRoutingModule } from './/app-routing.module';
+import { ChatpageComponent } from './chatpage/chatpage.component';
+import { NicknameComponent } from './nickname/nickname.component';
+import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,14 @@ import { ChatHistoryComponent } from './chat-history/chat-history.component';
     ContentComponent,
     FooterComponent,
     ChatBarComponent,
-    ChatHistoryComponent
+    ChatHistoryComponent,
+    ChatpageComponent,
+    NicknameComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,12 +1,8 @@
 <header>
     <app-header></app-header>
-    </header>
-    
-    <content>
-    <app-chat-history [history]="message"></app-chat-history>
-    <app-chat-bar (submitMessage)="onSubmitMessage($event)"></app-chat-bar>
-    </content>
-    
-    <footer>
+</header>
+     
+<router-outlet></router-outlet>
+<footer>
     <app-footer></app-footer>
-    </footer>
+</footer>
