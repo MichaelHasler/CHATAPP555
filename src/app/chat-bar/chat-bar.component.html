@@ -1,7 +1,9 @@
-<img src="assets/contentwireframe.png.jpg">
+<img src="assets/Icon.svg">
 
-<div>
-  <textarea [(ngModel)]="chatMessage" (keyup.enter)="addMessage(chatMessage)" class="form-control chat-box" rows="2" placeholder="deine Nachricht..."></textarea>
+<h3>{{Nick}}</h3>
+
+<div> 
   <button [disabled]="!chatMessage" class="btn btn-primary btn-nickname" (click)="addMessage(chatMessage)">senden</button>
 </div>
 
+<textarea [(ngModel)]="chatMessage" (keyup.enter)="addMessage(chatMessage)" class="form-control chat-box" rows="3" placeholder="deine Nachricht..."></textarea>

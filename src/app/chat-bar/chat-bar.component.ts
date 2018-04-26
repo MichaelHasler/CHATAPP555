@@ -9,7 +9,10 @@ import { Person } from '../person';
 export class ChatBarComponent implements OnInit {
 
   @Output() submitMessage: EventEmitter<string> =  new EventEmitter();
+
   public chatMessage: string;
+
+  Nick = (Person.Nickname);
 
   constructor() { }
 
@@ -18,9 +21,8 @@ export class ChatBarComponent implements OnInit {
 
   public addMessage(message: string): void {
     
-
     message = `${Person.Nickname} schrieb am ${new Date().toLocaleString('de')}: \n${message}`;
-
+    //alert(Person.Nickname)
     this.submitMessage.emit(message);
 
     console.log(message);

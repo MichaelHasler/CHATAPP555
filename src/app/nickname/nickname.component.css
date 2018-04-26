@@ -1,27 +1,29 @@
 img {
     display: block;
-    width: 40%;
-    margin: 0px auto 0px auto;
+    width: 50%;
+    margin: 40px auto 40px auto;
 }
 
 div {
-    width: 200px;
+    width: 50%;
     display: block;
-    margin: 30px auto;
-
+    margin: auto;
 }
 
 .chat-box {
-    width: 77%;
+    float: left;
+    width: 70%;
     margin: 0 auto;
     display: block;
+    height: 40px;
 }
     
 .btn-nickname {
     float: left;
-    width: 13%;
+    width: 29%;
     min-width:60px;
     margin-left: 1%;
+    height: 40px;
     
 }
 
