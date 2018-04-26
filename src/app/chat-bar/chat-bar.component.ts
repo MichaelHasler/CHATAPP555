@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Person } from '../person';
 
 @Component({
   selector: 'app-chat-bar',
@@ -16,9 +17,15 @@ export class ChatBarComponent implements OnInit {
   }
 
   public addMessage(message: string): void {
+    
+
+    message = `${Person.Nickname} schrieb am ${new Date().toLocaleString('de')}: \n${message}`;
+
     this.submitMessage.emit(message);
 
     console.log(message);
     this.chatMessage = '';
-  }
+    }
+
+  
 }

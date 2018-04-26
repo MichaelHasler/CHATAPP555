@@ -19,6 +19,10 @@ textarea {
     
     }
     
+.Person {
+    font: arial;
+}
+
     button {
     display: block;
     margin-left: auto;
@@ -29,7 +33,7 @@ textarea {
 
     img {
         float: left;
-        width: 10%;
+        width: 9%;
         margin: auto;
     }
    

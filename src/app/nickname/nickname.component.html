@@ -1,6 +1,10 @@
-
+<img src="assets/contentwireframe.png.jpg">
 
 <div>
-<textarea  class="form-control chat-box" rows="1" placeholder="Dein Nickname"></textarea>
-<button routerLink="/chatpage" class="btn btn-primary btn-nickname" >Erstellen</button>
+    <input [(ngModel)]="nickname" class="form-control chat-box" placeholder="Dein Nickname" (keyup.enter)="createNickname(nickname)">
+    <button class="btn btn-primary btn-nickname" (click)="createNickname(nickname)" (keyup.enter)="createNickname(nickname)">Erstellen</button>
+</div>
+
+<div>
+    {{message}}
 </div>

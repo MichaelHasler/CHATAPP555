@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Person } from '../person';
+import { AppRoutingModule } from '../app-routing.module';
+import { RouterModule, Routes, Router } from '@angular/router';
 
 @Component({
   selector: 'app-nickname',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NicknameComponent implements OnInit {
 
-  constructor() { }
+  public nickname: string;
+
+  public message: string;
+  
+  constructor(private router: Router)  { }
 
   ngOnInit() {
   }
 
+  public createNickname(nickname: string): void {    
+    if (!nickname) { 
+      alert('kein Nickname voranden...')
+    } else {
+      Person.Nickname = nickname;
+      this.router.navigate(['chatpage'])
+    }
+  
+  }
 }
