@@ -1,10 +1,13 @@
 <img src="assets/Icon.svg">
 
+<div id="please">
+    <h4>
+    {{message}}
+    </h4>
+</div>
+
 <div>
     <input [(ngModel)]="nickname" class="form-control chat-box" placeholder="Dein Nickname" (keyup.enter)="createNickname(nickname)">
     <button class="btn btn-primary btn-nickname" (click)="createNickname(nickname)" (keyup.enter)="createNickname(nickname)">Erstellen</button>
 </div>
 
-<div>
-    {{message}}
-</div>

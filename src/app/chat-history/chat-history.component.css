@@ -1,6 +1,15 @@
+img {
+    height: 12px;
+    float: left;
+
+}
+
 h4 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
+    float: left;
+    margin-left: 1%;
+    
 }
     
 

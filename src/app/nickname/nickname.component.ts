@@ -21,7 +21,8 @@ export class NicknameComponent implements OnInit {
 
   public createNickname(nickname: string): void {    
     if (!nickname) { 
-      alert('kein Nickname voranden...')
+      //alert('kein Nickname voranden...')
+      this.message = 'Wähle einen Nicknamen!'
     } else {
       Person.Nickname = nickname;
       this.router.navigate(['chatpage'])
