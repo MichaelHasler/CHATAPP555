@@ -1,5 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Person } from '../person';
+import { AppRoutingModule } from '../app-routing.module';
+import { RouterModule, Routes, Router } from '@angular/router';
 
 @Component({
   selector: 'app-chat-bar',
@@ -14,20 +16,25 @@ export class ChatBarComponent implements OnInit {
 
   Nick = (Person.Nickname);
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  
   public addMessage(message: string): void {
-    
-    message = `${Person.Nickname} schrieb am ${new Date().toLocaleString('de')}: \n${message}`;
-    //alert(Person.Nickname)
-    this.submitMessage.emit(message);
 
-    console.log(message);
-    this.chatMessage = '';
+    if (!Person.Nickname) {
+      this.router.navigate(['home'])
+      alert('kein Nicknamen vorhanden.')
+    } else {
+      message = `${Person.Nickname} schrieb am ${new Date().toLocaleString('de')}: \n${message}`;
+      //alert(Person.Nickname)
+      this.submitMessage.emit(message);
+
+      console.log(message);
+      this.chatMessage = '';
+      }
     }
 
-  
 }
