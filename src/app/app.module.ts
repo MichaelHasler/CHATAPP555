@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,6 +13,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { ChatpageComponent } from './chatpage/chatpage.component';
 import { NicknameComponent } from './nickname/nickname.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ChatService } from './services/chat.service';
 
 @NgModule({
   declarations: [
@@ -28,9 +29,12 @@ import { RouterModule, Routes } from '@angular/router';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ChatService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

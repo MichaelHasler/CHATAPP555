@@ -2,6 +2,8 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Person } from '../person';
 import { AppRoutingModule } from '../app-routing.module';
 import { RouterModule, Routes, Router } from '@angular/router';
+import { ChatMessage } from '../chat-message';
+import { ChatService } from '../services/chat.service';
 
 @Component({
   selector: 'app-chat-bar',
@@ -13,10 +15,10 @@ export class ChatBarComponent implements OnInit {
   @Output() submitMessage: EventEmitter<string> =  new EventEmitter();
 
   public chatMessage: string;
-
+  public message: string;
   Nick = (Person.Nickname);
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private chatService: ChatService) { }
 
   ngOnInit() {
   }
@@ -28,12 +30,23 @@ export class ChatBarComponent implements OnInit {
       this.router.navigate(['home'])
       alert('kein Nicknamen vorhanden.')
     } else {
-      message = `${Person.Nickname} schrieb am ${new Date().toLocaleString('de')}: \n${message}`;
+      //message = `${Person.Nickname} schrieb am ${new Date().toLocaleString('de')}: \n${message}`;
       //alert(Person.Nickname)
-      this.submitMessage.emit(message);
+      //this.submitMessage.emit(message);
 
-      console.log(message);
-      this.chatMessage = '';
+      //console.log(message);
+      //this.chatMessage = '';
+      this.message = '';
+      const messageToSend: ChatMessage = new ChatMessage();
+
+      messageToSend.message = message;
+      messageToSend.nickname = Person.Nickname;
+
+      this.chatService.addToHistory(messageToSend)
+        .subscribe(response => {
+          this.chatMessage = '';
+        },
+          (error: any) => console.log(<any>error));
       }
     }
 
