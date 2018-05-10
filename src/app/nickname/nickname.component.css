@@ -1,6 +1,6 @@
 img {
     display: block;
-    width: 40%;
+    width: 350px;
     margin: 40px auto 0px auto;
 }
 
@@ -9,7 +9,7 @@ img {
 }
 
 div {
-    width: 40%;
+    width: 350px;
     display: block;
     margin: auto;
     
