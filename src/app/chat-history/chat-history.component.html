@@ -1,5 +1,17 @@
-<div routerLink="/home">
+<div class="backhome"
+     routerLink="/home">
     <img src="assets/arrow.png">
     <h4> Nickname ändern </h4>
 </div>
-<textarea [(ngModel)]="history" [readonly]="true" rows="15" class="form-control"></textarea>
+
+<div class="chatfield">
+    <div *ngFor="let text of history">
+        <div class="card card-block {{text.side}}">
+            <div class="nickdate"> 
+                <h5 class="card-title">{{text.nickname}} </h5> 
+                <h6> {{text.date}} </h6> 
+            </div>
+            <p class="card-text">{{text.message}}</p>
+        </div>
+    </div>
+</div>

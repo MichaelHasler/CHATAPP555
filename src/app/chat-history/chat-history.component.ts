@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ChatService } from '../services/chat.service';
+import { Person } from '../person';
 
 @Component({
   selector: 'app-chat-history',
@@ -8,7 +9,8 @@ import { ChatService } from '../services/chat.service';
 })
 export class ChatHistoryComponent implements OnInit {
 
-  @Input() history: string;
+  @Input() history: Array<object>;
+
 
   constructor(private chatService: ChatService) { }
 
@@ -21,14 +23,24 @@ export class ChatHistoryComponent implements OnInit {
   private getHistory(): void {
     this.chatService.getHistory()
       .subscribe(response => {
-        this.history = '';
+        this.history = [];
+        var sideToBeDisplayed = 'left';
+        for(var i = 0; i<response.length; i++){
+          const date = new Date(response[i].date);
 
-        for (const history of response.reverse()) {
-          const date = new Date(history.date);
-
-          this.history += `${history.nickname}:\n(${date.toLocaleString('de')})\n${history.message}\n`;
+          if(Person.Nickname == response[i].nickname){
+            sideToBeDisplayed = 'right';
+          }
+          this.history[i] = {
+            nickname: response[i].nickname,
+            message:  response[i].message,
+            date: date.toLocaleString('de'),
+            side: sideToBeDisplayed      
+          };
+          sideToBeDisplayed = 'left';
         }
       });
+      console.log(this.history)
   }
 
 }

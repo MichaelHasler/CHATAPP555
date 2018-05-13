@@ -2,6 +2,7 @@ textarea {
     width: 80%;
     float: left;
     min-width: 240px;
+    resize: none;
     }
     
 .chat-box {
