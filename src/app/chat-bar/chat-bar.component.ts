@@ -30,12 +30,7 @@ export class ChatBarComponent implements OnInit {
       this.router.navigate(['home'])
       alert('kein Nicknamen vorhanden.')
     } else {
-      //message = `${Person.Nickname} schrieb am ${new Date().toLocaleString('de')}: \n${message}`;
-      //alert(Person.Nickname)
-      //this.submitMessage.emit(message);
 
-      //console.log(message);
-      //this.chatMessage = '';
       this.message = '';
       const messageToSend: ChatMessage = new ChatMessage();
 

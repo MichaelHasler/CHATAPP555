@@ -16,7 +16,6 @@ h4 {
     margin-left: 1%;
     
 }
-    
 
 textarea {
     margin-bottom: 20px;
@@ -57,14 +56,14 @@ textarea {
 .card-block.right {
     float: right;
     clear: both;
-    width: 250px;
+    width: 300px;
     margin: 7.5px;
 }
 
 .card-block.left{
     float: left;
     clear: both;
-    width: 250px;
+    width: 300px;
     margin: 7.5px;
 }
 
