@@ -4,10 +4,11 @@
     <h4> Nickname ändern </h4>
 </div>
 
-<div class="chatfield">
+<div class="chatfield" ngx-auto-scroll lockey-offset="10" obserce-attributes>
+
     <div *ngFor="let text of history">
-        <div class="card card-block {{text.side}}">
-            <div class="nickdate"> 
+        <div class="card card-block {{text.side}}"> 
+            <div class="nickdate {{text.imagecolor}}"> 
                 <h5 class="card-title">{{text.nickname}} </h5> 
                 <h6> {{text.date}} </h6> 
             </div>

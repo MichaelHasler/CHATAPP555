@@ -35,7 +35,26 @@ textarea {
 .card-block{
     padding: 5px;
 }
-.card-block.right{
+.card-block .nickdate.green::before{
+    content: "";
+    background: url("assets/Icon.svg");
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    z-index: 2;
+    background-size: contain;
+}
+
+.card-block .nickdate.blue::before{
+    content: "";
+    background: url("assets/Icon2.svg");
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    z-index: 2;
+    background-size: contain;
+}
+.card-block.right {
     float: right;
     clear: both;
     width: 250px;
@@ -58,6 +77,8 @@ h5 {
     font-size: 15px;
     font-weight: bold;
     float: left;
+    margin: 0 0 2px 30px;
+    transform: translateY(5px)
   
 }
 

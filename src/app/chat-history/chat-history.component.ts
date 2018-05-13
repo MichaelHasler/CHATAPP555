@@ -25,22 +25,29 @@ export class ChatHistoryComponent implements OnInit {
       .subscribe(response => {
         this.history = [];
         var sideToBeDisplayed = 'left';
+        var imageColor = "blue";
         for(var i = 0; i<response.length; i++){
           const date = new Date(response[i].date);
 
           if(Person.Nickname == response[i].nickname){
-            sideToBeDisplayed = 'right';
+            sideToBeDisplayed = 'right'; 
+            var imageColor = "green";       
           }
           this.history[i] = {
             nickname: response[i].nickname,
             message:  response[i].message,
             date: date.toLocaleString('de'),
-            side: sideToBeDisplayed      
+            side: sideToBeDisplayed,
+            imagecolor: imageColor,  
           };
           sideToBeDisplayed = 'left';
+          imageColor = "blue";
         }
       });
       console.log(this.history)
+
+     
+       
   }
 
 }

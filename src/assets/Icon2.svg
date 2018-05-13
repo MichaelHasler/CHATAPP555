@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Ebene4" transform="matrix(1.01231,0,0,1.01231,-5.2359,-5.49826)">
+        <rect x="-20.319" y="-20.059" width="893.006" height="927.222" style="fill:white;stroke:black;stroke-width:2.96px;"/>
+    </g>
+    <g transform="matrix(1.20615,0,0,1.21068,-145.537,-155.822)">
+        <ellipse cx="452.298" cy="459.099" rx="323.344" ry="322.133" style="fill:rgb(7,46,231);stroke:black;stroke-width:16.55px;"/>
+    </g>
+    <g id="Ebene1" transform="matrix(1.01231,0,0,1.01231,-5.2359,-5.49826)">
+        <path d="M24.422,318.131C-23.188,510.211 188.371,492.487 269.061,494.354C323.112,495.605 358.651,503.202 366.686,510.001C374.722,516.801 397.666,518.787 369.459,551.39C296.184,636.086 381.123,688.834 405.374,693.084C415.446,694.849 433.001,718.976 409.437,736.129C381.013,756.82 378.435,763.224 344.13,779.813C344.037,779.858 493.608,807.555 618.777,716.844C619.223,716.521 595.303,724.345 537.032,711.667C484.961,700.338 525.661,671.904 533.589,656.749C558.363,609.388 542.9,544.638 450.903,517.198C397.874,501.381 387.566,466.736 402.789,458.222C563.294,368.457 714.603,401.026 696.782,154.892C696.411,149.771 622.001,78.64 595.805,70.731C396.517,10.564 202.61,67.369 68.092,207.594C48.476,228.042 24.871,316.318 24.422,318.131Z" style="fill:white;stroke:black;stroke-width:14.82px;"/>
+    </g>
+</svg>
