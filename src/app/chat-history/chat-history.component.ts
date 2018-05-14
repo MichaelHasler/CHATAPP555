@@ -11,7 +11,6 @@ export class ChatHistoryComponent implements OnInit {
 
   @Input() history: Array<object>;
 
-
   constructor(private chatService: ChatService) { }
 
   ngOnInit() {
@@ -31,7 +30,7 @@ export class ChatHistoryComponent implements OnInit {
 
           if(Person.Nickname == response[i].nickname){
             sideToBeDisplayed = 'right'; 
-            var imageColor = "green";       
+            imageColor = "green";       
           }
           this.history[i] = {
             nickname: response[i].nickname,
