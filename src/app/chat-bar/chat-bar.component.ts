@@ -29,6 +29,7 @@ export class ChatBarComponent implements OnInit {
     if (!Person.Nickname) {
       this.router.navigate(['home'])
       alert('kein Nicknamen vorhanden.')
+
     } else {
 
       this.message = '';
