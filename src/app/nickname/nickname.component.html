@@ -7,7 +7,7 @@
 </div>
 
 <div>
-    <input [(ngModel)]="nickname" class="form-control chat-box" placeholder="Dein Nickname" (keyup.enter)="createNickname(nickname)">
+    <input [(ngModel)]="nickname" maxlength="22" class="form-control chat-box" placeholder="Dein Nickname" (keyup.enter)="createNickname(nickname)">
     <button class="btn btn-primary btn-nickname" (click)="createNickname(nickname)" (keyup.enter)="createNickname(nickname)">Erstellen</button>
 </div>
 

@@ -6,4 +6,4 @@
   <button [disabled]="!chatMessage" class="btn btn-primary btn-nickname" (click)="addMessage(chatMessage)">senden</button>
 </div>
 
-<textarea [(ngModel)]="chatMessage" (keyup.enter)="addMessage(chatMessage)" class="form-control chat-box" rows="3" placeholder="deine Nachricht..."></textarea>
+<textarea [(ngModel)]="chatMessage" minlength="1" (keyup.enter)="addMessage(chatMessage)" class="form-control chat-box" rows="3" placeholder="deine Nachricht..."></textarea>
